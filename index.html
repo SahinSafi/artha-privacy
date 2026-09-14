@@ -1,35 +1,158 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy for Artha</title>
-<style>body{margin:0;background:#fafbf9;color:#192a25;font:17px/1.65 system-ui,sans-serif}main{max-width:760px;margin:auto;padding:40px 24px 72px}h1{font-size:2rem;line-height:1.2}h2{font-size:1.25rem;margin-top:2rem}p{overflow-wrap:anywhere}</style>
-</head><body><main>
-<h1>Privacy Policy for Artha</h1>
-<p>Effective date: [EFFECTIVE_DATE]</p>
-<p>Artha (Android package: com.safi.artha) is provided by Md Sahin. For privacy questions, contact umshahinsafi@gmail.com.</p>
-<h2>Information used on your device</h2>
-<p>Artha is an offline personal finance app. It stores and processes the information you enter on your device, including account names and balances, income and expenses, transfers, categories, notes, budgets, monthly plans, recurring entries, investment records and manual valuations. It also stores app preferences, local record identifiers, installation metadata and operational information needed for backups, reminders and app locking.</p>
-<p>This information supports the app&#x27;s recordkeeping, calculations, organization, reminders, backup and restore features. Artha does not require registration or an online user account. The app does not transmit these records to the developer or to an Artha server.</p>
-<h2>Analytics, advertising and sharing</h2>
-<p>Artha does not include advertising, analytics, automatic crash-upload services, bank connections or automatic cloud synchronization. The developer does not receive or sell your in-app financial records. The app does not request Internet access.</p>
-<h2>Backups and file access</h2>
-<p>You can export a backup or select a backup to restore using Android&#x27;s file picker. Artha accesses the document you select for that operation. Backups contain financial records and app preferences and should be treated as sensitive.</p>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#193e35"><meta name="description" content="Learn how Artha handles your financial records, local storage, optional app locking and user-controlled backups.">
+<title>Privacy Policy for Artha</title><style>
+:root{--ink:#193e35;--muted:#52685f;--green:#226d53;--mint:#dff3e5;--paper:#fbfcf8;--line:#dce5dd;--coral:#ffae92;--yellow:#f4dc80}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:28px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:4px}
+a:focus-visible{outline:3px solid #be5736;outline-offset:5px;border-radius:4px}
+.skip{position:absolute;top:-100px;left:20px;background:white;padding:12px;z-index:10}
+.skip:focus{top:12px}
+.wrap{width:min(1160px,calc(100% - 80px));margin:auto}
+
+.header{display:flex;align-items:center;justify-content:space-between;padding:25px 0}
+.brand{text-decoration:none;display:flex;gap:11px;align-items:center;font-size:27px;font-weight:750;letter-spacing:-1px}
+.brand-mark{width:39px;height:39px;display:grid;place-items:center;background:var(--ink);color:#e5f6bc;border-radius:13px;font-size:25px;font-weight:600}
+.header-right{display:flex;gap:26px;align-items:center;font-size:13px;font-weight:600}
+.header-label{color:var(--muted)}
+.contact-link{text-decoration:none;border-bottom:1px solid #a0b7a8}
+.hero{position:relative;isolation:isolate;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;min-height:438px;padding:54px 58px;background:#e6f2dc;border:1px solid #d6e4ca;border-radius:30px;overflow:hidden}
+.hero:before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse at 92% 5%,#f5e3a7 0,transparent 50%),radial-gradient(ellipse at 0 100%,#ccebdc 0,transparent 60%)}
+.eyebrow{display:flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800}
+.dot{width:7px;height:7px;background:var(--green);border-radius:50%}
+h1{font-size:clamp(40px,4.7vw,62px);line-height:1.08;letter-spacing:-2.8px;margin:21px 0 20px;font-weight:750}
+h1 em{font-style:normal;color:var(--green)}
+.hero-description{font-size:16px;line-height:1.7;max-width:365px;margin:0;color:#3d5c4e}
+.hero-meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:25px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border:1px solid #b9ceb2;border-radius:30px;font-size:11px;font-weight:650;background:#ffffff63}
+.art{width:100%;max-width:440px;justify-self:end;overflow:visible}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:22px 0 58px}
+.principle{display:flex;gap:15px;padding:24px;border-radius:19px;background:#e9f3ee}
+.principle:nth-child(2){background:#fff0e7}
+.principle:nth-child(3){background:#f1effb}
+.mini-icon{width:39px;height:39px;flex-shrink:0;display:grid;place-items:center;background:#ffffffa6;border-radius:12px}
+.mini-icon svg{width:23px;height:23px}
+.principle h2{font-size:15px;margin:0;letter-spacing:-.2px}
+.principle p{font-size:12px;line-height:1.6;margin:3px 0 0;color:var(--muted)}
+
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:65px;align-items:start}
+.sidebar{position:sticky;top:28px}
+.side-label{font-size:10px;letter-spacing:2px;font-weight:800;margin:0 0 18px;color:var(--muted)}
+.toc{display:grid;gap:3px}
+.toc a{display:flex;align-items:center;gap:12px;font-size:12px;text-decoration:none;padding:10px;border-radius:8px;transition:background .15s}
+.toc a>span:first-child{font-size:10px;color:#6b8077;font-variant-numeric:tabular-nums}
+.toc a:hover{background:#e2efdf}
+.nav-arrow{margin-left:auto;color:#7f9387}
+.side-note{margin-top:29px;padding:21px;background:#f5f0df;border:1px solid #e9e1c9;border-radius:15px;font-size:12px;line-height:1.7}
+.side-note strong{display:block;font-size:13px;margin-bottom:6px}
+.side-note a{overflow-wrap:anywhere}
+.document-intro{padding-bottom:26px;border-bottom:1px solid var(--line)}
+.document-intro .eyebrow{font-size:10px;color:var(--green)}
+.document-intro h2{font-size:29px;letter-spacing:-1px;line-height:1.3;margin:10px 0 18px}
+.document-intro p{font-size:14px;color:var(--muted);margin:9px 0}
+.policy-section{padding:30px 0;border-bottom:1px solid var(--line);scroll-margin-top:20px}
+.section-heading{display:flex;gap:14px;align-items:center;margin-bottom:17px}
+.section-number{font-size:11px;font-weight:750;background:#e4efdf;border-radius:9px;display:grid;place-items:center;flex:0 0 35px;height:35px}
+.policy-section:nth-of-type(3n+2) .section-number{background:#ffeadf}
+.policy-section:nth-of-type(3n) .section-number{background:#eeebf8}
+.section-heading h2{font-size:20px;line-height:1.35;letter-spacing:-.5px;margin:0}
+.policy-section p{font-size:14px;line-height:1.9;color:#455a51;margin:0 0 15px;overflow-wrap:anywhere}
+.policy-section p:last-child{margin-bottom:0}
+.policy-section:target{background:#edf5e84d;box-shadow:-15px 0 #edf5e84d,15px 0 #edf5e84d}
+.footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);margin-top:62px;padding:25px 0 32px;font-size:12px;color:var(--muted)}
+.footer-brand{font-weight:750;color:var(--ink)}
+
+@media(min-width:1000px){.art{transform:translateX(16px)}
+}
+@media(max-width:900px){.wrap{width:calc(100% - 44px)}
+.hero{padding:38px 30px;min-height:390px}
+.hero h1{font-size:46px}
+.layout{grid-template-columns:195px minmax(0,1fr);gap:30px}
+.principle{padding:18px 14px;gap:10px}
+.principles{gap:12px}
+.mini-icon{width:32px;height:32px}
+.header-label{display:none}
+}
+
+@media(max-width:650px){.wrap{width:calc(100% - 32px)}
+.header{padding:20px 0}
+.brand{font-size:24px}
+.header-right{font-size:12px}
+.hero{grid-template-columns:1fr;padding:32px 27px 12px;border-radius:24px}
+.hero h1{font-size:clamp(32px,11vw,48px);letter-spacing:-2px}
+.hero-description{max-width:100%}
+.hero-meta{margin-top:21px}
+.art{width:90%;max-width:320px;justify-self:center;margin-top:7px}
+.principles{grid-template-columns:1fr;gap:10px;margin:16px 0 30px}
+.principle{padding:16px 18px}
+.principle h2{font-size:14px}
+.principle p{font-size:12px}
+.mini-icon{width:36px;height:36px}
+.layout{grid-template-columns:1fr;gap:28px}
+.sidebar{position:static}
+.side-label{margin-bottom:10px}
+.toc{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;background:#f0f4eb;padding:8px;border-radius:14px}
+.toc a{font-size:11px;gap:7px;padding:8px}
+.nav-arrow{display:none}
+.side-note{display:none}
+.document-intro h2{font-size:27px}
+.section-heading h2{font-size:19px}
+.policy-section{padding:25px 0}
+.footer{margin-top:35px;gap:16px;font-size:11px;align-items:flex-start}
+.footer a{white-space:nowrap}
+}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+*{transition:none!important}
+}
+@media print{body{background:white}
+.wrap{width:100%}
+.header-right,.art,.principles,.sidebar,.footer,.skip{display:none}
+.hero{display:block;min-height:0;padding:20px;border:0;background:#fff}
+.hero:before{display:none}
+.hero h1{font-size:32px}
+.layout{display:block}
+.policy-section{break-inside:avoid}
+.hero-meta{display:none}
+}
+
+</style></head>
+<body id="top"><a class="skip" href="#policy">Skip to privacy policy</a>
+<div class="wrap"><header class="header"><a class="brand" href="#top" aria-label="Artha, back to top"><span class="brand-mark" aria-hidden="true">a</span>artha<span style="color:#7f9f77">.</span></a><div class="header-right"><span class="header-label">Your everyday money companion</span><a class="contact-link" href="mailto:umshahinsafi@gmail.com">Get in touch ↗</a></div></header>
+<main><div class="hero"><div><div class="eyebrow"><span class="dot"></span>Thoughtfully offline</div><h1>Your money.<br><em>Your business.</em></h1><p class="hero-description">A little clarity about your privacy. Here’s how Artha looks after the financial records you keep in the app.</p><div class="hero-meta"><span class="pill">Offline finance</span><span class="pill">No account required</span></div></div><svg class="art" viewBox="0 0 440 340" fill="none" aria-hidden="true" focusable="false">
+<circle cx="239" cy="165" r="135" stroke="#aac79d" stroke-dasharray="4 8"/>
+<circle cx="239" cy="165" r="109" fill="#cce2bd" fill-opacity=".6"/>
+<path d="M53 110h16m-8-8v16M364 245h16m-8-8v16" stroke="#568168" stroke-width="2" stroke-linecap="round"/>
+<circle cx="350" cy="76" r="5" fill="#eaa186"/><circle cx="100" cy="261" r="4" fill="#7d9c76"/>
+<g transform="rotate(-12 190 150)"><rect x="121" y="67" width="170" height="182" rx="19" fill="#fffaf0" stroke="#c4d3b9"/>
+<rect x="143" y="91" width="72" height="7" rx="3.5" fill="#b4c7a6"/>
+<rect x="143" y="111" width="111" height="5" rx="2.5" fill="#e0e7d6"/>
+<rect x="146" y="157" width="20" height="43" rx="5" fill="#b7d09b"/><rect x="179" y="137" width="20" height="63" rx="5" fill="#76a77f"/><rect x="212" y="121" width="20" height="79" rx="5" fill="#377959"/>
+</g>
+<rect x="106" y="155" width="224" height="143" rx="25" fill="#1b483b" fill-opacity=".1"/>
+<rect x="103" y="144" width="224" height="143" rx="25" fill="#235f48"/>
+<path d="M104 168c0-13 11-24 24-24h176c13 0 23 11 23 24" stroke="#458269" stroke-width="2"/>
+<rect x="263" y="187" width="77" height="51" rx="15" fill="#bada9e" stroke="#285c42" stroke-width="3"/>
+<circle cx="285" cy="212" r="7" fill="#30644b"/>
+<path d="M129 243h33m-33 11h55" stroke="#7bac88" stroke-width="5" stroke-linecap="round"/>
+<g transform="rotate(10 320 120)"><rect x="277" y="71" width="83" height="94" rx="20" fill="#ffb496" stroke="#f4a282"/>
+<path d="M319 90l24 9v19c0 16-24 29-24 29s-24-13-24-29V99l24-9z" fill="#fff5e8"/>
+<path d="m309 116 7 7 14-16" stroke="#357352" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="rotate(-8 82 218)"><circle cx="80" cy="211" r="30" fill="#f5d677" stroke="#c2a653" stroke-width="2"/><circle cx="80" cy="211" r="23" stroke="#d9b855"/><path d="M88 201c-12-8-23 7-8 10s4 18-8 10m8-27v34" stroke="#7d682e" stroke-width="2.5" stroke-linecap="round"/></g>
+</svg></div>
+<div class="principles" aria-label="Privacy at a glance"><div class="principle"><span class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg></span><div><h2>Stored on your device</h2><p>Your financial records stay local.</p></div></div><div class="principle"><span class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 7v6c0 5 9 9 9 9s9-4 9-9V7l-9-4Z"/><path d="m8 12 3 3 5-6"/></svg></span><div><h2>No ads. No analytics.</h2><p>A little more peace of mind.</p></div></div><div class="principle"><span class="mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3M12 2v12m-4-4 4 4 4-4M4 14v6h16v-6"/></svg></span><div><h2>Your backup, your choice</h2><p>Choose where to save your records.</p></div></div></div>
+<div class="layout"><aside class="sidebar" aria-label="Policy navigation"><p class="side-label">IN THIS POLICY</p><nav class="toc" aria-label="Policy sections"><a href="#on-device"><span>01</span>On your device<span class="nav-arrow">↗</span></a><a href="#sharing"><span>02</span>Ads & sharing<span class="nav-arrow">↗</span></a><a href="#backups"><span>03</span>Your backups<span class="nav-arrow">↗</span></a><a href="#security"><span>04</span>App security<span class="nav-arrow">↗</span></a><a href="#notifications"><span>05</span>Notifications<span class="nav-arrow">↗</span></a><a href="#deletion"><span>06</span>Retention & deletion<span class="nav-arrow">↗</span></a><a href="#support"><span>07</span>Support messages<span class="nav-arrow">↗</span></a><a href="#children"><span>08</span>Children<span class="nav-arrow">↗</span></a><a href="#contact"><span>09</span>Changes & contact<span class="nav-arrow">↗</span></a></nav><div class="side-note"><strong>Privacy is personal.</strong>Have a question about your data? Reach out to Md Sahin.<br><a href="mailto:umshahinsafi@gmail.com">umshahinsafi@gmail.com ↗</a></div></aside>
+<article id="policy" aria-labelledby="policy-title"><div class="document-intro"><div class="eyebrow">THE DETAILS, IN ONE PLACE</div><h2 id="policy-title">Privacy Policy for Artha</h2><p>Effective date: [EFFECTIVE_DATE]</p><p>Artha (Android package: com.safi.artha) is provided by Md Sahin. For privacy questions, contact umshahinsafi@gmail.com.</p></div><section class="policy-section" id="on-device" aria-labelledby="heading-on-device"><div class="section-heading"><span class="section-number">01</span><h2 id="heading-on-device">Information used on your device</h2></div><p>Artha is an offline personal finance app. It stores and processes the information you enter on your device, including account names and balances, income and expenses, transfers, categories, notes, budgets, monthly plans, recurring entries, investment records and manual valuations. It also stores app preferences, local record identifiers, installation metadata and operational information needed for backups, reminders and app locking.</p>
+<p>This information supports the app&#x27;s recordkeeping, calculations, organization, reminders, backup and restore features. Artha does not require registration or an online user account. The app does not transmit these records to the developer or to an Artha server.</p></section><section class="policy-section" id="sharing" aria-labelledby="heading-sharing"><div class="section-heading"><span class="section-number">02</span><h2 id="heading-sharing">Analytics, advertising and sharing</h2></div><p>Artha does not include advertising, analytics, automatic crash-upload services, bank connections or automatic cloud synchronization. The developer does not receive or sell your in-app financial records. The app does not request Internet access.</p></section><section class="policy-section" id="backups" aria-labelledby="heading-backups"><div class="section-heading"><span class="section-number">03</span><h2 id="heading-backups">Backups and file access</h2></div><p>You can export a backup or select a backup to restore using Android&#x27;s file picker. Artha accesses the document you select for that operation. Backups contain financial records and app preferences and should be treated as sensitive.</p>
 <p>You choose where to save a backup. If you select a cloud storage or other external document provider, that provider may store or transmit the file under its own terms and privacy policy. Artha does not operate that service. Copies you export are outside Artha&#x27;s private storage and remain under your control.</p>
-<p>Backup password encryption is optional. When enabled, the backup uses AES-256-GCM encryption. An unencrypted backup can be read by anyone who obtains it. Keep your backup password safe; the developer cannot recover it. App-lock PIN verification material and biometric templates are not included in financial backups.</p>
-<h2>App locking and device security</h2>
-<p>You may enable a local app PIN and biometric unlock on supported devices. Artha stores protected PIN verification material locally using Android Keystore-backed protection. Android handles biometric authentication; Artha receives an authentication result and does not access or store your fingerprint or face templates.</p>
-<p>App data is stored in Android&#x27;s app-private storage. App locking is an access control and is not a claim that the entire financial database is separately encrypted by Artha. Security also depends on your device, operating system and control of exported files.</p>
-<h2>Notifications</h2>
-<p>If you allow notifications, Artha can display local budget alerts and recurring-entry review reminders. You can manage notification permission in Android settings. Reminder delivery depends on Android background scheduling and device settings.</p>
-<h2>Retention and deletion</h2>
-<p>Artha retains local records while they remain in its storage. To remove all Artha local app data, use Android Settings &gt; Apps &gt; Artha &gt; Storage (or Storage &amp; cache) &gt; Clear storage (or Clear data), or uninstall Artha. Menu names vary by device. Clearing storage removes local records, settings and app-lock information.</p>
+<p>Backup password encryption is optional. When enabled, the backup uses AES-256-GCM encryption. An unencrypted backup can be read by anyone who obtains it. Keep your backup password safe; the developer cannot recover it. App-lock PIN verification material and biometric templates are not included in financial backups.</p></section><section class="policy-section" id="security" aria-labelledby="heading-security"><div class="section-heading"><span class="section-number">04</span><h2 id="heading-security">App locking and device security</h2></div><p>You may enable a local app PIN and biometric unlock on supported devices. Artha stores protected PIN verification material locally using Android Keystore-backed protection. Android handles biometric authentication; Artha receives an authentication result and does not access or store your fingerprint or face templates.</p>
+<p>App data is stored in Android&#x27;s app-private storage. App locking is an access control and is not a claim that the entire financial database is separately encrypted by Artha. Security also depends on your device, operating system and control of exported files.</p></section><section class="policy-section" id="notifications" aria-labelledby="heading-notifications"><div class="section-heading"><span class="section-number">05</span><h2 id="heading-notifications">Notifications</h2></div><p>If you allow notifications, Artha can display local budget alerts and recurring-entry review reminders. You can manage notification permission in Android settings. Reminder delivery depends on Android background scheduling and device settings.</p></section><section class="policy-section" id="deletion" aria-labelledby="heading-deletion"><div class="section-heading"><span class="section-number">06</span><h2 id="heading-deletion">Retention and deletion</h2></div><p>Artha retains local records while they remain in its storage. To remove all Artha local app data, use Android Settings &gt; Apps &gt; Artha &gt; Storage (or Storage &amp; cache) &gt; Clear storage (or Clear data), or uninstall Artha. Menu names vary by device. Clearing storage removes local records, settings and app-lock information.</p>
 <p>Exported backups are not deleted when you clear app data or uninstall. Delete those files separately from each location where you saved or copied them, including any cloud provider&#x27;s trash or retained copies according to that provider&#x27;s controls. Restoring a backup brings its records back into Artha.</p>
-<p>Artha is configured to disable Android automatic app backup and exclude app data from device transfer. Keep your own backup if you want to restore your records. The developer has no server copy of your in-app records to recover or delete. If you forget your app PIN, recovery requires clearing local app data and restoring a trusted backup, if available.</p>
-<h2>Support communications</h2>
-<p>If you contact the support email, the developer receives the email address, message and attachments you choose to send. These are used to respond to your request. Email is processed by the email providers involved. Do not send PINs, passwords or financial backup files.</p>
-<p>[SUPPORT_RETENTION_POLICY: Before publishing, state how long support communications are retained, when they are deleted, and any required retention exceptions.]</p>
-<h2>Children</h2>
-<p>Artha is intended for personal finance recordkeeping and is not specifically designed for children. It does not ask users to provide their age. Any target-audience declaration in Google Play must reflect the publisher&#x27;s actual intended audience.</p>
-<h2>Changes and contact</h2>
-<p>This policy may be updated to reflect changes to Artha or its data practices. The current policy will be published at [PRIVACY_POLICY_URL] with an updated effective date.</p>
-<p>For questions about this policy or information you have sent directly to support, contact Md Sahin at umshahinsafi@gmail.com.</p>
-</main></body></html>
+<p>Artha is configured to disable Android automatic app backup and exclude app data from device transfer. Keep your own backup if you want to restore your records. The developer has no server copy of your in-app records to recover or delete. If you forget your app PIN, recovery requires clearing local app data and restoring a trusted backup, if available.</p></section><section class="policy-section" id="support" aria-labelledby="heading-support"><div class="section-heading"><span class="section-number">07</span><h2 id="heading-support">Support communications</h2></div><p>If you contact the support email, the developer receives the email address, message and attachments you choose to send. These are used to respond to your request. Email is processed by the email providers involved. Do not send PINs, passwords or financial backup files.</p>
+<p>[SUPPORT_RETENTION_POLICY: Before publishing, state how long support communications are retained, when they are deleted, and any required retention exceptions.]</p></section><section class="policy-section" id="children" aria-labelledby="heading-children"><div class="section-heading"><span class="section-number">08</span><h2 id="heading-children">Children</h2></div><p>Artha is intended for personal finance recordkeeping and is not specifically designed for children. It does not ask users to provide their age. Any target-audience declaration in Google Play must reflect the publisher&#x27;s actual intended audience.</p></section><section class="policy-section" id="contact" aria-labelledby="heading-contact"><div class="section-heading"><span class="section-number">09</span><h2 id="heading-contact">Changes and contact</h2></div><p>This policy may be updated to reflect changes to Artha or its data practices. The current policy will be published at [PRIVACY_POLICY_URL] with an updated effective date.</p>
+<p>For questions about this policy or information you have sent directly to support, contact Md Sahin at umshahinsafi@gmail.com.</p></section></article></div></main>
+<footer class="footer"><div><span class="footer-brand">artha.</span> &nbsp; Made for a more organized everyday.<br>Privacy contact: Md Sahin</div><a href="#top">Back to top ↑</a></footer></div></body></html>
